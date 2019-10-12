@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".information"
+    tools:showIn="@layout/activity_information">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Player"
+            android:id="@+id/first_name"
+            android:fontFamily="casual"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/first_name"
+            android:layout_alignRight="@id/first_name"
+            android:text="Second Player"
+            android:id="@+id/second_name"
+            android:fontFamily="casual"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf = "@id/first_name"
+            android:layout_toEndOf="@id/first_name"
+            android:id="@+id/edit_firstN"
+            android:hint="@string/input_message"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_firstN"
+            android:layout_toRightOf = "@id/second_name"
+            android:layout_toEndOf="@id/second_name"
+            android:id="@+id/edit_secondN"
+            android:hint="@string/input_message2"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below = "@id/second_name"
+            android:text="@string/play_button_label"
+            android:onClick="storeName"/>
+
+
+</RelativeLayout>
